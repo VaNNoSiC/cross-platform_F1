@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_title">Apex Archive</string>
+    <string name="app_subtitle">Formula 1 catalog</string>
+
+    <string name="theme_light">Light theme</string>
+    <string name="theme_dark">Dark theme</string>
+
+    <string name="back">Back</string>
+    <string name="race_not_found">Race not found</string>
+</resources>

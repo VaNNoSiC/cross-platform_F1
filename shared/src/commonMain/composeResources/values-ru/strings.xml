@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_title">Архив Apex</string>
+    <string name="app_subtitle">Каталог Формулы-1</string>
+
+    <string name="theme_light">Светлая тема</string>
+    <string name="theme_dark">Тёмная тема</string>
+
+    <string name="back">Назад</string>
+    <string name="race_not_found">Гонка не найдена</string>
+</resources>
