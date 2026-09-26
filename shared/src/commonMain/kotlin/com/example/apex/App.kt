@@ -27,9 +27,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import org.jetbrains.compose.resources.stringResource
-import apex.shared.generated.resources.Res
-import apex.shared.generated.resources.theme_dark
-import apex.shared.generated.resources.theme_light
+import f1archive.shared.generated.resources.Res
+import f1archive.shared.generated.resources.theme_dark
+import f1archive.shared.generated.resources.theme_light
 import androidx.compose.runtime.CompositionLocalProvider
 
 private val navConfig = SavedStateConfiguration {
@@ -55,9 +55,7 @@ fun App() {
 
     AppTheme(darkTheme = darkTheme)
     {
-        CompositionLocalProvider(
-            LocalAppLocale provides language
-        ){
+
         val backStack = rememberNavBackStack(
             navConfig,
             Route.RaceList
@@ -129,4 +127,4 @@ fun App() {
             )
         }
     }
-}}
+}

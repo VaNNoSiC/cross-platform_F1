@@ -12,9 +12,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.stringResource
-import apex.shared.generated.resources.Res
-import apex.shared.generated.resources.back
-import apex.shared.generated.resources.race_not_found
+import f1archive.shared.generated.resources.Res
+import f1archive.shared.generated.resources.back
+import f1archive.shared.generated.resources.race_not_found
 
 @Composable
 fun RaceDetailsScreen(
