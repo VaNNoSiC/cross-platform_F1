@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+
     <string name="app_title">Архив Apex</string>
     <string name="app_subtitle">Каталог Формулы-1</string>
 
     <string name="theme_light">Светлая тема</string>
     <string name="theme_dark">Тёмная тема</string>
 
+    <string name="language_russian">Русский</string>
+    <string name="language_english">English</string>
+
+    <string name="search">Поиск</string>
+    <string name="search_races">Поиск гонок</string>
+    <string name="nothing_found">Ничего не найдено</string>
+
     <string name="back">Назад</string>
     <string name="race_not_found">Гонка не найдена</string>
+
+    <string name="stage">Этап</string>
+    <string name="date">Дата</string>
+    <string name="city">Город</string>
+    <string name="country">Страна</string>
+    <string name="circuit">Трасса</string>
+    <string name="drivers">Гонщики</string>
+    <string name="open_circuit">Открыть трассу</string>
+    <string name="loading">Загрузка...</string>
+    <string name="circuit_not_found">Трасса не найдена</string>
 </resources>

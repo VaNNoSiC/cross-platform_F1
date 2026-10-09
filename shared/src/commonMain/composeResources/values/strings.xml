@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+
     <string name="app_title">Apex Archive</string>
     <string name="app_subtitle">Formula 1 catalog</string>
 
     <string name="theme_light">Light theme</string>
     <string name="theme_dark">Dark theme</string>
 
+    <string name="language_russian">Русский</string>
+    <string name="language_english">English</string>
+
+    <string name="search">Search</string>
+    <string name="search_races">Search races</string>
+    <string name="nothing_found">Nothing found</string>
+
     <string name="back">Back</string>
     <string name="race_not_found">Race not found</string>
+
+    <string name="stage">Round</string>
+    <string name="date">Date</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+    <string name="circuit">Circuit</string>
+    <string name="drivers">Drivers</string>
+    <string name="open_circuit">Open circuit</string>
+    <string name="loading">Loading...</string>
+    <string name="circuit_not_found">Circuit not found</string>
 </resources>

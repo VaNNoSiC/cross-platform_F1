@@ -3,7 +3,6 @@ package com.example.apex
 import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
 
-
 @Serializable
 sealed interface Route : NavKey {
 
@@ -11,7 +10,12 @@ sealed interface Route : NavKey {
     data object RaceList : Route
 
     @Serializable
-    data class RaceDetails(val raceId: Int) : Route
+    data class RaceDetails(
+        val raceId: Int
+    ) : Route
 
-
+    @Serializable
+    data class CircuitDetails(
+        val circuitId: Int
+    ) : Route
 }

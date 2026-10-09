@@ -1,0 +1,22 @@
+package com.example.apex
+
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ProvidedValue
+import androidx.compose.runtime.staticCompositionLocalOf
+import java.util.Locale
+
+actual object LocalAppLocale {
+    private val localLocale = staticCompositionLocalOf {
+        Locale.getDefault().toLanguageTag()
+    }
+
+    actual val current: String
+        @Composable get() = localLocale.current
+
+    @Composable
+    actual infix fun provides(value: String?): ProvidedValue<*> {
+        val locale = value ?: Locale.getDefault().toLanguageTag()
+        Locale.setDefault(Locale.forLanguageTag(locale))
+        return localLocale provides locale
+    }
+}
