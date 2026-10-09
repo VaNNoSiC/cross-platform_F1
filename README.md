@@ -1,41 +1,70 @@
-This is a Kotlin Multiplatform project targeting Android, Web, Desktop (JVM).
+# F1Archive
 
-* [/shared](./shared/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./shared/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./shared/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./shared/src/jvmMain/kotlin)
-    folder is the appropriate location.
+F1Archive — кроссплатформенное приложение для просмотра информации о гонках чемпионата Formula 1.
 
-### Running the apps
+## Возможности
 
-Use the run configurations provided by the run widget in your IDE's toolbar. You can also use these commands and options:
+* Просмотр списка гонок.
+* Поиск гонок по названию, трассе, стране и городу.
+* Просмотр подробной информации о гонке: этап, дата, город, страна и трасса.
+* Просмотр информации о трассе.
+* Просмотр списка гонщиков, связанных с гонкой.
+* Переход от гонки к соответствующей трассе.
+* Переключение языка интерфейса между русским и английским.
+* Переключение светлой и тёмной темы.
 
-- Android app: `./gradlew :androidApp:assembleDebug`
-- Desktop app:
-  - Hot reload: `./gradlew :desktopApp:hotRun --auto`
-  - Standard run: `./gradlew :desktopApp:run`
-- Web app:
-  - Wasm target (faster, modern browsers): `./gradlew :webApp:wasmJsBrowserDevelopmentRun`
-  - JS target (slower, supports older browsers): `./gradlew :webApp:jsBrowserDevelopmentRun`
+## Технологии
 
-### Running tests
+* Kotlin
+* Kotlin Multiplatform
+* Compose Multiplatform
+* Material 3
+* Navigation 3
+* Kotlin Coroutines и StateFlow
 
-Use the run button in your IDE's editor gutter, or run tests using Gradle tasks:
+## Архитектура
 
-- Android tests: `./gradlew :shared:testAndroidHostTest`
-- Desktop tests: `./gradlew :shared:jvmTest`
-- Web tests:
-  - Wasm target: `./gradlew :shared:wasmJsTest`
-  - JS target: `./gradlew :shared:jsTest`
+Приложение разделено на несколько частей:
 
----
+* **UI** — Composable-функции для отображения экранов.
+* **ViewModel** — управление состоянием экранов и обработка действий пользователя.
+* **Repository** — получение данных для приложения.
+* **MockRaceRepository** — источник тестовых данных, используемый вместо удалённого API на текущем этапе разработки.
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://kotlinlang.org/compose-multiplatform/),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
+## Запуск
 
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [YouTrack](https://youtrack.jetbrains.com/newIssue?project=CMP).
+Для сборки проекта требуется установленный JDK и настроенное окружение Android Studio.
+
+### Android
+
+Откройте проект в Android Studio, дождитесь синхронизации Gradle и запустите конфигурацию Android-приложения на эмуляторе или устройстве.
+
+### Desktop (JVM)
+
+В корневой папке проекта выполните:
+
+```bash
+./gradlew :desktopApp:run
+```
+
+В Windows можно использовать:
+
+```bat
+gradlew.bat :desktopApp:run
+```
+
+### Сборка общего модуля
+
+```bash
+./gradlew :shared:build
+```
+
+На Windows:
+
+```bat
+gradlew.bat :shared:build
+```
+
+## Текущий статус
+
+Первая версия приложения использует локальные тестовые данные. Подключение внешнего API и получение актуальных результатов гонок не входят в текущую реализацию.
